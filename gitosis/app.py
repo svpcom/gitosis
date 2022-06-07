@@ -38,7 +38,7 @@ class App(object):
         self.handle_args(parser, cfg, options, args)
 
     def setup_basic_logging(self):
-        logging.basicConfig(filename='/home/git/gitosis.log')
+        logging.basicConfig(filename=os.path.expanduser('~/gitosis.log'))
 
     def create_parser(self):
         parser = optparse.OptionParser()
